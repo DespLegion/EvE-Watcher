@@ -193,6 +193,12 @@ async def update_systems(ctx):
         await ctx.send('Обновление систем отменено')
 
 
+@bot.command()
+@commands.is_owner()
+async def shutdown(ctx):
+    exit()
+
+
 @update_systems.error
 @reset_channels.error
 @timer_ping_channel.error
